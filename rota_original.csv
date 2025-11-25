@@ -1,12 +1,9 @@
-### Rota Original
-
-| Etapa | Origem | Destino | Distância (km) | Valor Recebido (R$) | Pago | Observações |
-|------|--------|---------|----------------|----------------------|------|-------------|
-| 0 | Casa (Rua Porto do Una 306) | Roldão Tiradentes | – | – | – | – |
-| 1 | Roldão Tiradentes | José Bonifácio | 3.0 | 9.00 | Sim | – |
-| 2 | José Bonifácio | Guaianases | 2.5 | 7.50 | Sim | Entrega 2 |
-| 3 | Guaianases | Inácio Monteiro | 3.0 | 9.00 | Sim | Entrega 3 |
-| 4 | Inácio Monteiro | Prestes Maia | 3.5 | 10.50 | Sim | Entrega 4 |
-| 5 | Prestes Maia | São Mateus | 6.0 | 18.00 | Sim | Entrega 5 |
-| TOTAL_PAGO | --- | --- | 20.0 | 60.00 | Sim | Total da rota |
-| VOLTA_PARA_CASA | São Mateus | Casa (Rua Porto do Una 306) | – | – | – | Volta final |
+etapa;origem;destino;distancia_km;valor_recebido_R$;pago;observacoes
+0;Casa (Rua Porto do Una 306);Roldão Tiradentes;;;;;
+1;Roldão Tiradentes;José Bonifácio;3.0;9.00;Sim;
+2;José Bonifácio;Guaianases;2.5;7.50;Sim;Entrega 2
+3;Guaianases;Inácio Monteiro;3.0;9.00;Sim;Entrega 3
+4;Inácio Monteiro;Prestes Maia;3.5;10.50;Sim;Entrega 4
+5;Prestes Maia;São Mateus;6.0;18.00;Sim;Entrega 5
+TOTAL_PAGO;---;---;20.0;60.00;Sim;Total da rota
+VOLTA_PARA_CASA;São Mateus;Casa (Rua Porto do Una 306);;;;
