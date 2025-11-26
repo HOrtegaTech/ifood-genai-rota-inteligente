@@ -1,7 +1,7 @@
 # Rota Inteligente — MVP (Final da Jornada)
 
-**Resumo rápido:** Projeto autoral de Helen Ortega — solução para reduzir deslocamento não remunerado do entregador no final do turno, sem aumentar a quilometragem paga nem alterar clientes/valores. MVP foca no *momento final da jornada* (última corrida).
-
+**Resumo rápido:** Projeto autoral de Helen Ortega para reduzir o deslocamento **não remunerado** no final do turno do entregador, sem alterar valores, clientes ou quilometragem paga.  
+O MVP foca no *momento final da jornada* — a definição da última entrega.
 ---
 
 ## 🚩 Por que isso importa
@@ -18,7 +18,8 @@ Entregadores frequentemente terminam o turno longe de casa, acumulando quilômet
 | Km não pagos | 11,0 km | 2,2 km | – 8,8 km |
 | Tempo após a rota | ~25 min | ~6 min | – 19 min |
 
-**Interpretação:** A IA não altera o valor pago; altera a ordem das entregas aceitas para minimizar km não pago no fim do turno.
+**Interpretação:** A IA não altera o valor pago nem modifica os clientes.  
+Ela apenas reorganiza a *última etapa da rota*, reduzindo quilômetros não remunerados.
 
 ---
 
@@ -26,6 +27,9 @@ Entregadores frequentemente terminam o turno longe de casa, acumulando quilômet
 Os dados de exemplo estão nos arquivos:
 - `rota_original.csv`  
 - `rota_ajustada.csv`
+
+- Ambos foram simulados com base em um padrão observado na operação real:  
+**em média, as rotas equilibradas pagam aproximadamente R$ 3,00 por km**.
 
 ### Prévia (dados de exemplo)
 
@@ -100,3 +104,13 @@ flowchart TD
 
     K --> M[Final proximidade da casa e menos km nao pagos]
 ```
+## ✔️ Resultado esperado
+
+A solução sugere automaticamente a melhor ordem final — aquela que:
+
+- mantém o custo da plataforma idêntico  
+- reduz deslocamento não remunerado  
+- aproxima a última entrega do endereço favorito  
+- considera histórico e preferências do entregador  
+
+O resultado é uma experiência mais humana e eficiente no final do turno, sem alterar o funcionamento central da plataforma.
