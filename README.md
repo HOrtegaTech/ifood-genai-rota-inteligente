@@ -56,28 +56,47 @@ Os dados de exemplo estão nos arquivos:
 | VOLTA_PARA_CASA | Jardim São Paulo | Casa (Rua Porto do Una 306) | 2.2 | 0.00 | Não | Deslocamento final não pago |
 
 ---
+## Fluxograma — Estado atual (pontos de dor)
 
-## 🎯 Fluxogramas (Estado atual & Solução proposta)
-
-**Estado atual (pontos de dor)**
 ```mermaid
 flowchart TD
-  A[Tela: Pacote de entregas aceito] --> B[Ordem fixa apresentada ao entregador]
-  B --> C[Entregador aceita sem reordenar]
-  C --> D[Execução da rota conforme ordem]
-  D --> E[Última entrega acontece (sem controle)]
-  E --> F[Desfecho: entrega final longe de casa]
+    A[Rota de entrega aceita] --> B[Ordem fixa apresentada ao entregador]
+    B --> C[Entregador aceita rota sem alterar ordem]
+    C --> D[Execucao da rota na ordem original]
+    D --> E[Ultima entrega realizada sem controle]
+    E --> F[Fim da rota longe de casa]
 
-  subgraph DORES [Pontos de dor]
-    G1[Km não pagos altos no final]
-    G2[Falta de previsibilidade do fim do turno]
-    G3[Desgaste físico e tempo perdido]
-    G4[Risco de cancelamento/insatisfação]
-    G5[App não usa histórico do entregador]
-  end
+    subgraph DORES [Pontos de dor]
+        G1[Km nao pagos no final]
+        G2[Falta de previsibilidade]
+        G3[Tempo extra e desgaste fisico]
+        G4[Risco de cancelamento]
+        G5[App nao usa historico do entregador]
+    end
 
-  E --> G1
-  E --> G2
-  D --> G3
-  C --> G4
-  B --> G5
+    F --> G1
+    F --> G2
+    D --> G3
+    C --> G4
+    B --> G5
+```
+
+## Fluxo da Solucao Proposta (IA no Final da Jornada)
+```mermaid
+flowchart TD
+    A[Pedidos de entregas aceito] --> B{Momento final da jornada}
+    B -->|Nao| C[Fluxo normal segue rota original]
+    B -->|Sim| D[Entregador define endereco favorito e horario de termino]
+
+    D --> E[IA acessa historico do entregador]
+    E --> F[IA aplica regras do MVP]
+    F --> G[IA simula opcoes de ordem final]
+    G --> H[IA escolhe a melhor opcao]
+    H --> I[App mostra sugestao para o entregador]
+
+    I --> J{Entregador aceita sugestao}
+    J -->|Sim| K[Aplicar nova ordem final da rota]
+    J -->|Nao| L[Manter rota original]
+
+    K --> M[Final proximidade da casa e menos km nao pagos]
+```
