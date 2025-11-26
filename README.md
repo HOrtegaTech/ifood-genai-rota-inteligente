@@ -1,7 +1,7 @@
 # Rota Inteligente — MVP (Final da Jornada)
 
-**Resumo rápido:** Projeto autoral de Helen Ortega para reduzir o deslocamento **não remunerado** no final do turno do entregador, sem alterar valores, clientes ou quilometragem paga.  
-O MVP foca no *momento final da jornada* — a definição da última entrega.
+Resumo rápido: Projeto autoral de Helen Ortega para reduzir o deslocamento não remunerado no final do turno do entregador, sem alterar valores, clientes ou quilometragem paga.  
+O MVP foca no momento final da jornada — a definição da última entrega. 
 ---
 
 ## 🚩 Por que isso importa
