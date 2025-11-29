@@ -1,0 +1,5 @@
+﻿ponto,endereco,distancia_km,tempo_min,observacoes
+"A,""R. Barbalho Bezerra, 270"",1.8,5,""mais próximo da casa"""
+"B,""R. Estado do Paraná, 34"",6.0,18,""distância casa→B"""
+"C,""R. das Papoulas, 28"",5.6,19,""distância casa→C"""
+"D,""R. Bartolino de Pádua, 32"",5.9,20,""distância casa→D (última entregue)"""
