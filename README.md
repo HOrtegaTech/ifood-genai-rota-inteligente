@@ -118,3 +118,116 @@ A solução sugere automaticamente a melhor ordem final — aquela que:
 - considera histórico e preferências do entregador  
 
 O resultado é uma experiência mais humana e eficiente no final do turno, sem alterar o funcionamento central da plataforma.
+
+
+## 🧪 Teste de campo real — Rota coletada no dia 27/01/2025
+
+Este experimento faz parte da validação do MVP da Rota Inteligente, cujo objetivo é analisar:
+
+Em quais situações faz sentido sugerir uma reordenação apenas da última entrega, reduzindo o deslocamento não remunerado, sem alterar custo, valores ou clientes.
+
+Para isso, coletei uma rota REAL realizada na operação como entregadora iFood, documentei os percursos e comparei:
+
+rota original (como o app entregou)
+
+distância de cada ponto até meu endereço favorito (Rua Porto do Una, 306)
+
+distância final da última entrega até casa
+
+# Dados coletados (originais do percurso)
+
+| Etapa | Origem                                 | Destino                           | Distância (km) | Tempo   |
+|-------|-----------------------------------------|------------------------------------|----------------|---------|
+| 1     | Rua Porto do Una, 306 (Casa)           | Mercado Roldão Tiradentes          | 3,1 km         | 14 min  |
+| 2     | Mercado Roldão Tiradentes              | R. Barbalho Bezerra, 270           | 1,8 km         | 9 min   |
+| 3     | R. Barbalho Bezerra, 270               | R. Estado do Paraná, 34            | 5 km           | 24 min  |
+| 4     | R. Estado do Paraná, 34                | R. das Papoulas, 28                | 1,1 km         | 7 min   |
+| 5     | R. das Papoulas, 28                    | R. Bartolino de Pádua, 32          | 2,4 km         | 10 min  |
+| —     | Última entrega → Casa (não remunerado) | Rua Porto do Una, 306              | 6,5 km         | 25 min  |
+
+
+# Distância de cada ponto até o endereço favorito (casa)
+
+| Ponto                       | Distância até casa | Tempo   |
+|-----------------------------|--------------------|---------|
+| R. Barbalho Bezerra, 270    | 1,8 km             | 5 min   |
+| R. Estado do Paraná, 34     | 6 km               | 18 min  |
+| R. das Papoulas, 28         | 5,6 km             | 19 min  |
+| R. Bartolino de Pádua, 32   | 5,9 km             | 20 min  |
+
+## 🧠 Análise do Teste Real — Rota 2025-11-28
+
+Quando comparei cada entrega com a distância até meu endereço favorito, ficou evidente:
+
+A entrega mais próxima da minha casa era a Barbalho Bezerra.
+
+Ela já era a primeira entrega da rota original.
+
+Reordená-la para o final aumentaria o percurso total, quebrando a regra principal do MVP:
+➡️ Não aumentar a quilometragem total da rota para a plataforma.
+
+## 🎯 Conclusão direta
+
+Neste cenário específico, o algoritmo do iFood entregou a melhor ordem possível dentro das restrições reais.
+
+## 📌 O que este teste PROVA sobre o MVP
+
+Este teste reforça uma verdade central sobre o projeto:
+
+## 👉 O MVP não é sobre mudar TODAS as rotas.
+
+É sobre identificar QUANDO faz sentido — e quando não faz.
+
+Em alguns cenários (como no meu MVP inicial),
+trocar a última entrega reduz muito o KM não remunerado.
+
+Em outros cenários (como este teste real),
+a ordem ideal já está correta e não deve ser alterada.
+
+Isso demonstra que:
+
+O agente não deve forçar mudanças
+
+O agente deve decidir com base em dados reais
+
+A autonomia precisa ser inteligente, não automática
+
+## 💡 Evolução da hipótese (insights da validação de campo)
+
+Após conversar com especialistas e validar com dados reais, refinei a visão do MVP:
+
+O objetivo não é afirmar como o algoritmo do iFood funciona.
+
+O foco é melhorar a transparência e a autonomia no fim da jornada.
+
+A dor real é a falta de previsibilidade sobre onde o entregador termina o dia.
+
+A reordenação só deve acontecer quando não alterar valor/custo para a plataforma.
+
+O entregador deve poder sinalizar:
+
+“Quero encerrar minha jornada agora. Qual é a melhor última entrega para mim?”
+
+Esse é o centro da proposta.
+
+## 🧩 Próximos Passos
+
+📌 Coletar mais 2–3 rotas reais para identificar padrões
+
+📌 Criar a primeira lógica do agente de sugestão da última entrega
+
+📌 Definir regras de tolerância (ex.: até +0,5 km permitido)
+
+📌 Testar o agente com rotas reais + rotas simuladas
+
+📌 Documentar resultados e evoluções no MVP
+
+## 📎 Arquivos incluídos neste teste
+
+/dados/rota-real-2025-01.csv — Rota completa coletada
+
+/dados/distancias-casa-2025-01.csv — Distâncias casa → entregas
+
+Helen Ortega — MVP de Rota Inteligente (iFood)
+
+## ✨ Construindo uma jornada final mais humana, eficiente e justa para quem está na rua.
