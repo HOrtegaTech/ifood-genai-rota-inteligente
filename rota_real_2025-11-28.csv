@@ -1,0 +1,7 @@
+﻿etapa,origem,destino,dist_km,tempo_min,tipo,pago,observacoes
+"1,""Rua Porto do Una, 306 (Casa)"",""Mercado Roldão Tiradentes"",3.1,14,ida,Sim,""deslocamento inicial pago"""
+"2,""Mercado Roldão Tiradentes"",""R. Barbalho Bezerra, 270"",1.8,9,entrega,Sim,""Entrega 1"""
+"3,""R. Barbalho Bezerra, 270"",""R. Estado do Paraná, 34"",5.0,24,entrega,Sim,""Entrega 2"""
+"4,""R. Estado do Paraná, 34"",""R. das Papoulas, 28"",1.1,7,entrega,Sim,""Entrega 3"""
+"5,""R. das Papoulas, 28"",""R. Bartolino de Pádua, 32"",2.4,10,entrega_final,Sim,""Entrega 4 (última entregue)"""
+"F,""R. Bartolino de Pádua, 32"",""Rua Porto do Una, 306"",6.5,25,volta,Não,""retorno não remunerado"""
