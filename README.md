@@ -76,7 +76,9 @@ flowchart TD
         G2[Falta de previsibilidade]
         G3[Tempo extra e desgaste fisico]
         G4[Risco de cancelamento]
-        G5[App nao usa historico do entregador]
+        G5[Dependência 100% da ordem automática]
+        G6[Pouca autonomia no fim da jornada]
+
     end
 
     F --> G1
@@ -84,6 +86,7 @@ flowchart TD
     D --> G3
     C --> G4
     B --> G5
+    B --> G6
 ```
 
 ## Fluxo da Solucao Proposta (IA no Final da Jornada)
