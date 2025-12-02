@@ -210,18 +210,6 @@ O entregador deve poder sinalizar:
 
 Esse é o centro da proposta.
 
-## 🧩 Próximos Passos
-
-📌 Coletar mais 2–3 rotas reais para identificar padrões
-
-📌 Criar a primeira lógica do agente de sugestão da última entrega
-
-📌 Definir regras de tolerância (ex.: até +0,5 km permitido)
-
-📌 Testar o agente com rotas reais + rotas simuladas
-
-📌 Documentar resultados e evoluções no MVP
-
 ## 📎 Arquivos incluídos neste teste
 
 /dados/rota-real-2025-01.csv — Rota completa coletada
@@ -231,3 +219,69 @@ Esse é o centro da proposta.
 Helen Ortega — MVP de Rota Inteligente (iFood)
 
 ## ✨ Construindo uma jornada final mais humana, eficiente e justa para quem está na rua.
+
+
+## ✨ Encerramento do MVP — Rota Inteligente
+
+🔄 Mudança natural de direção — O que aconteceu depois das validações de campo
+
+No dia 29/11, enquanto conversava com outros entregadores durante a Black Friday para continuar validando o meu MVP, perguntei a um entregador se ele achava que seria útil ter uma forma de encerrar a rota mais perto de casa.
+Ele respondeu algo que me surpreendeu:
+
+## “Isso já apareceu pra mim ontem.”
+
+No meu aplicativo ainda não existia essa função.
+Então perguntei qual era o nível dele no iFood — ele era Diamante, o nível mais alto.
+A partir daí, deduzi que talvez a funcionalidade estivesse sendo testada primeiro com níveis superiores (sem afirmar como funciona, apenas observando).
+
+Mesmo assim, como ainda não tinha aparecido para mim, continuei validando meu MVP na rua.
+
+## 📅 E então, no dia 01/12…
+
+O iFood lançou oficialmente a funcionalidade Rota Destino, permitindo ao entregador escolher para onde deseja ir até duas vezes ao dia.
+
+Eu não sei como a lógica interna funciona nem quais critérios o iFood usa para calcular a rota destino.
+Mas, sinceramente, eu adoraria saber — não por curiosidade, mas para entender se o meu raciocínio estava caminhando próximo de quem já constrói esse produto por dentro.
+
+E esse lançamento me trouxe algo importante:
+
+✔️ Confirmação de que o meu olhar estava alinhado ao produto
+
+Mesmo trabalhando “de fora”, minha análise de dor, minha percepção de campo e minha lógica estavam apontando para uma necessidade real — a mesma que o time interno também observou.
+
+Isso não diminui meu MVP.
+Na verdade, fortalece:
+
+➡️ Eu identifiquei e documentei uma dor real
+➡️ Validei com entregadores
+➡️ Construí uma solução simples, focada e orientada por dados
+➡️ E essa necessidade se confirmou na prática com o lançamento oficial
+
+Para mim, isso mostrou exatamente o que eu mais busco:
+
+estar alinhada com impacto, com a vida real e com a visão do produto.
+
+## 🧭 O que muda daqui pra frente
+
+Como a dor da última entrega agora possui uma solução ativa na plataforma, este MVP é finalizado com sucesso.
+Ele cumpriu o papel dele:
+
+identificar a dor
+
+validar com usuários reais
+
+testar hipóteses
+
+aprender com o campo
+
+e ajustar o caminho
+
+Agora sigo para a segunda dor que mapeei na operação — e que impacta fortemente a experiência do entregador:
+
+## 🚚💡 MVP 2 — “Pedido Realmente Pronto”
+
+(documentado em outro README)
+
+Uma dor invisível para quem não vive o fluxo do mercado, mas totalmente real para quem está na rua — e que eu consegui acessar diretamente porque estou dentro da operação e conversei com quem vive cada etapa.
+
+Esse é o próximo MVP que estou desenvolvendo, agora com mais repertório, mais segurança e ainda mais alinhamento com produto.
